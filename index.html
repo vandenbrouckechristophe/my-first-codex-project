@@ -56,11 +56,13 @@
       knop.addEventListener('click', () => {
         bericht.textContent = 'Hallo wereld!';
       });
-    </script>
+  </script>
  <script>
 function zegWelkom() {
-    alert("Welkom!");
+    document.getElementById("bericht").innerHTML = "Welkom!";
 }
 </script>
+
+<p id="bericht"></p>
   </body>
 </html>
