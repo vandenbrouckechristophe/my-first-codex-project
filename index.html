@@ -3,9 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hallo wereld</title>
+    <title>Mijn eerste website</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hallo wereld</h1>
+    <button id="hallo-knop" type="button">Klik mij</button>
+
+    <script>
+      const knop = document.getElementById("hallo-knop");
+
+      knop.addEventListener("click", () => {
+        alert("Hallo wereld!");
+      });
+    </script>
   </body>
 </html>
