@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mijn eerste website</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 640px;
+        text-align: center;
+      }
+
+      .knoppen {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      button {
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #welkomKnop {
+        background-color: yellow;
+        border: 1px solid #a88f00;
+      }
+
+      #nietDrukkenKnop {
+        background-color: #ffb3b3;
+        border: 1px solid #a33;
+      }
+
+      #bericht {
+        margin-top: 16px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="knoppen">
+        <button id="welkomKnop">Klik hier</button>
+        <button id="nietDrukkenKnop">Hier niet Drukken</button>
+      </div>
+      <p id="bericht"></p>
+    </div>
+
+    <script>
+      const welkomKnop = document.getElementById('welkomKnop');
+      const nietDrukkenKnop = document.getElementById('nietDrukkenKnop');
+      const bericht = document.getElementById('bericht');
+
+      welkomKnop.addEventListener('click', () => {
+        bericht.textContent = 'Welkom!';
+      });
+
+      nietDrukkenKnop.addEventListener('click', () => {
+        bericht.textContent = 'Deugniet';
+      });
+    </script>
+  </body>
+</html>
