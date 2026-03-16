@@ -1,54 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mijn eerste website</title>
     <style>
-        /* Zorg dat body de hele viewport vult en inhoud centreert */
-        body {
-            background-color: #3498db; /* blauwe achtergrond */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            flex-direction: column; /* zodat knop en tekst onder elkaar staan */
-            color: white;
-        }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;
+        font-family: Arial, sans-serif;
+      }
 
-        /* Styling van de knop */
-        button {
-            padding: 20px 40px;
-            font-size: 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 10px;
-            background-color: #2c3e50;
-            color: white;
-        }
+      .container {
+        text-align: center;
+      }
 
-        button:hover {
-            background-color: #1abc9c;
-        }
+      #welkomKnop {
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: yellow;
+        border: 1px solid #a88f00;
+      }
 
-        /* Bericht onder de knop */
-        #bericht {
-            margin-top: 20px;
-            font-size: 24px;
-        }
+      #bericht {
+        margin-top: 12px;
+        font-size: 20px;
+      }
     </style>
-</head>
-<body>
-
-    <button onclick="zegWelkom()">Klik hier</button>
-    <p id="bericht"></p>
+  </head>
+  <body>
+    <div class="container">
+      <button id="welkomKnop">Klik hier</button>
+      <p id="bericht"></p>
+    </div>
 
     <script>
-        function zegWelkom() {
-            document.getElementById("bericht").innerText = "Welkom!";
-        }
-    </script>
+      const knop = document.getElementById('welkomKnop');
+      const bericht = document.getElementById('bericht');
 
-</body>
+      knop.addEventListener('click', () => {
+        bericht.textContent = 'Welkom!';
+      });
+    </script>
+  </body>
 </html>
