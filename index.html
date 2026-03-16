@@ -16,35 +16,59 @@
       }
 
       .container {
+        width: 100%;
+        max-width: 640px;
         text-align: center;
       }
 
-      #welkomKnop {
+      .knoppen {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      button {
         padding: 12px 20px;
         font-size: 16px;
         cursor: pointer;
+      }
+
+      #welkomKnop {
         background-color: yellow;
         border: 1px solid #a88f00;
       }
 
+      #nietDrukkenKnop {
+        background-color: #ffb3b3;
+        border: 1px solid #a33;
+      }
+
       #bericht {
-        margin-top: 12px;
+        margin-top: 16px;
         font-size: 20px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <button id="welkomKnop">Klik hier</button>
+      <div class="knoppen">
+        <button id="welkomKnop">Klik hier</button>
+        <button id="nietDrukkenKnop">Hier niet Drukken</button>
+      </div>
       <p id="bericht"></p>
     </div>
 
     <script>
-      const knop = document.getElementById('welkomKnop');
+      const welkomKnop = document.getElementById('welkomKnop');
+      const nietDrukkenKnop = document.getElementById('nietDrukkenKnop');
       const bericht = document.getElementById('bericht');
 
-      knop.addEventListener('click', () => {
+      welkomKnop.addEventListener('click', () => {
         bericht.textContent = 'Welkom!';
+      });
+
+      nietDrukkenKnop.addEventListener('click', () => {
+        bericht.textContent = 'Deugniet';
       });
     </script>
   </body>
