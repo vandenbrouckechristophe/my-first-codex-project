@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mijn eerste website</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      #welkomKnop {
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #bericht {
+        margin-top: 12px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="welkomKnop">Klik hier</button>
+      <p id="bericht"></p>
+    </div>
+
+    <script>
+      const knop = document.getElementById('welkomKnop');
+      const bericht = document.getElementById('bericht');
+
+      knop.addEventListener('click', () => {
+        bericht.textContent = 'Welkom!';
+      });
+    </script>
+  </body>
+</html>
