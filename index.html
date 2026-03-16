@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hallo wereld knop</title>
+  </head>
+  <body>
+    <button id="halloKnop">Klik hier</button>
+    <p id="bericht"></p>
+
+    <script>
+      const knop = document.getElementById('halloKnop');
+      const bericht = document.getElementById('bericht');
+
+      knop.addEventListener('click', () => {
+        bericht.textContent = 'Hallo wereld!';
+      });
+    </script>
+  </body>
+</html>
