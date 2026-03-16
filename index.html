@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hallo wereld</title>
+    <title>Hallo knop</title>
   </head>
   <body>
-    <h1>Hallo wereld</h1>
+    <h1>Eenvoudige webpagina</h1>
+    <button id="hallo-knop" type="button">Klik mij</button>
+    <p id="bericht"></p>
+
+    <script>
+      const knop = document.getElementById("hallo-knop");
+      const bericht = document.getElementById("bericht");
+
+      knop.addEventListener("click", () => {
+        bericht.textContent = "Hallo wereld!";
+      });
+    </script>
   </body>
 </html>
