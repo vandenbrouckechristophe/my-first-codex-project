@@ -3,26 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mijn eerste website</title>
-    <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: lightblue;
-      }
-    </style>
+    <title>Hallo knop</title>
   </head>
   <body>
+    <h1>Eenvoudige webpagina</h1>
     <button id="hallo-knop" type="button">Klik mij</button>
+    <p id="bericht"></p>
 
     <script>
       const knop = document.getElementById("hallo-knop");
+      const bericht = document.getElementById("bericht");
 
       knop.addEventListener("click", () => {
-        alert("Hallo wereld!");
+        bericht.textContent = "Hallo wereld!";
       });
     </script>
   </body>
